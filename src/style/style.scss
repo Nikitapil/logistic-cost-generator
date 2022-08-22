@@ -1,0 +1,158 @@
+@import './nullstyle.scss';
+
+body {
+    font-family: monospace;
+}
+main {
+    padding-bottom: 15px;
+}
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    width: 100%;
+    min-height: 60px;
+    background: #373737;
+    color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.search {
+    margin-top: 20px;
+}
+
+.search__input {
+    display: flex;
+    font-size: 22px;
+    border-bottom: 2px solid #373737;
+    align-items: flex-end;
+    input {
+        flex: 1 1 auto;
+        border: none;
+        outline: none;
+    }
+    button {
+        border: none;
+        background: none;
+        font-size: 42px;
+        transform: rotate(90deg);
+        margin-bottom: -10px;
+    }
+}
+
+.region-list {
+    max-height: 200px;
+    overflow: scroll;
+    display: none;
+    padding: 0 10px;
+    background: rgb(245, 244, 244);
+    &.open {
+        display: block;
+    }
+}
+
+.region {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+    border-bottom: 2px solid #373737;
+}
+
+.regions__form {
+    margin-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #373737;
+    &:first-child {
+        margin-top: 30px;
+    }
+}
+
+.regions__form-header {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #373737;
+}
+
+.regions__form-title {
+    font-weight: 700;
+}
+.regions__base-cost {
+    padding: 10px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 2px solid #373737;
+}
+
+.regions__add-cost {
+    margin-left: auto;
+}
+
+.additional-cost {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    align-items: flex-end;
+    &:not(:last-child) {
+        border-bottom: 2px solid #373737;
+    }
+}
+
+.additional-cost__controlls {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+}
+
+.additional-cost__price {
+    margin-left: auto;
+}
+.total-cost {
+    margin-top: 5px;
+    color: #808080;
+}
+
+.app-button {
+    background: #3a7fff;
+    border: 1px solid #373737;
+    color: #faebd7;
+    padding: 2px 5px;
+    border-radius: 7px;
+    transition: 0.4s;
+    &:hover {
+        background: #206eff;
+    }
+}
+
+.regions-forms {
+    display: flex;
+    flex-direction: column;
+}
+
+.save-btn {
+    align-self: flex-end;
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+.base-cost__error {
+    color: #ff0000;
+    font-size: 10px;
+}
+
+.error-message {
+    color: #ff0000;
+}
